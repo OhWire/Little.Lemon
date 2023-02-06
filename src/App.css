@@ -1,0 +1,719 @@
+body {
+	background: linear-gradient(-45deg, #22493187, #87afa2a0, #9f8e394d, #1e412fd3);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+
+
+
+.Container {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: repeat(12,  1fr);
+  grid-template-rows:  1fr 1.4fr 0.2fr 1.2fr 0.3fr ;
+  grid-template-areas:
+        "HR HR HR HR HR HR HR HR HR HR HR HR"
+        "HL HL HL HL HL HL HL HL HL HL HL HL"
+        "TST TST TST TST TST TST TST TST TST TST TST TST"
+        "AB AB AB AB AB AB AB AB AB AB AB AB"
+        "CT CT CT CT CT CT CT CT CT CT CT CT" 
+  ;
+}
+
+
+
+
+
+
+
+.Hero{
+  grid-area: HR;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: 0.02fr 1fr ;
+  background-color: white;
+  color: black;
+  font-family: "Karla";
+} 
+
+.HeroImage{
+  grid-column: 6/12;
+  grid-row: 2/2;
+  padding-top: 1em;
+  max-height: 30em;
+  max-width: 50em;
+  
+}
+
+.Description {
+  grid-column: 3/6;
+  grid-row: 2/2;
+  padding-right: 2em;
+  font-size: 1.2em;
+}
+
+.Description h1{
+  font-family: "Markazi Text";
+  color: #F4CE14;
+}
+
+.Description p {
+  font-family: "Karla";
+  letter-spacing: 0.1em;
+  padding-bottom: 2em;
+}
+
+.Description button {
+  background-color: black;
+  color: white;
+  font-family: "Karla";
+  padding: 0.4em 1em;
+  border-radius: 8px;
+  font-size: 1.em;
+}
+
+.Description button:hover{
+  transition: ease-in-out 0.3s;
+  color: #495E57;
+}
+
+
+.Chef{
+  border-radius: 8px;
+  margin-left: 1.5em; 
+}
+
+
+.Image {
+ width: 100%;
+ height: 100%;
+ border-radius: 8px;
+}
+
+
+
+
+
+.Testimonials {
+  display: flex;
+  align-items: center;
+  grid-area: TST;
+  padding-bottom: 2em;
+}
+
+.Profiles {
+  display: flex;
+
+}
+
+.AboutSection {
+  grid-area: AB;
+  display: flex;
+}
+
+.Contact {
+  display: flex;
+  align-items: center;
+  grid-area: CT;
+}
+
+.Lists{
+  display: flex;
+}
+
+
+
+.Highlights{
+  grid-area: HL;
+  display: grid;
+  grid-template-rows: 0.1fr 2fr;
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  
+}
+
+.CTASection {
+  grid-row: 1/1;
+  grid-column: 2/3;
+  display: grid;
+  align-items: center;
+  padding: 1em;
+}
+
+.CalltoAction{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Karla";
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
+.ButtonHeader{
+   margin-left: auto;
+   background-color: #F4CE14;
+   color: black;
+   border-color: transparent;
+   border-radius: 5px;
+   padding:  0 1.5em;
+   font-size: 1.4em;
+   font-weight: bold;
+   width: 10em;
+   height: 2em;
+   transition: ease-in-out 0.3s;
+   
+}
+
+
+.ButtonHeader:hover{
+  margin-left: auto;
+  background-color: #495E57;
+  transition: ease-in-out 0.3s;
+  color: black;
+  border-color: transparent;
+  border-radius: 5px;
+  padding:  0 1.5em;
+  font-size: 1.4em;
+  font-weight: bold;
+  width: 10em;
+  height: 2em;
+  
+}
+
+
+
+.Cards {
+  display: flex;
+  grid-row: 2/2;
+  grid-column: 1/4;
+  padding: 2em 0em;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Card {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr;
+  margin: 0 1em;
+  background-color: #EDEFEE;
+  font-family: "Karla";
+ 
+  
+}
+
+.SpecialImg{
+  display: flex;
+  grid-row: 1/1;
+  grid-column: 1/-1;
+  max-height: 12em;
+  
+  
+}
+
+
+.Special{
+  height: 100%;
+  width: 100%;
+  min-width: 5em;
+  min-height: 3em;
+}
+
+.SpecialDescription{
+  grid-row: 2/4;
+  padding: 1em;
+  min-width: 18em;
+  max-width: 18em;
+}
+
+.SpecialDescription{
+  font-size: 1.2em;
+}
+
+.Price{
+  padding-left: 2em;
+  color: #F4CE14;
+}
+
+.Testimonials{
+  grid-area: TST;
+  display: grid;
+  grid-template-rows: 0.1fr 0.5fr;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.TestimonialsHeading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row: 1/1;
+  grid-column: 1/-1;
+  font-size: 1.5em;
+  font-family: "Karla";
+  letter-spacing: 0.2em;
+}
+
+.Profiles{
+  display: flex;
+  grid-row: 2/2;
+  grid-column: 1/-1;
+  justify-content: space-around;
+  margin:  0 2em;
+}
+
+.Profile {
+  display: grid;
+  grid-template-rows: 0.2fr 0.3fr 0.2fr;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 1em;
+}
+
+.Profile h3{
+  grid-row: 1/1;
+  grid-column: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+  font-family: "Karla";
+}
+
+.Profile p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row: 3/3;
+  grid-column: 1/3;
+}
+
+.PersonImage{
+  grid-row: 2/2;
+  grid-column: 1/1;
+  height: 100%;
+  width: 100%;
+}
+
+.ProfilePicture{
+  height: 100%;
+  width: 100%;
+}
+
+.StarRating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 2/2;
+  grid-column: 2/3;
+}
+
+.AboutSection{
+  grid-area: AB;
+  background-color: white;
+  padding: 2em 1em;
+}
+
+
+.AboutDescription {
+    margin-left: 5em;
+    font-family: "Karla";
+    letter-spacing: 0.1em;
+
+}
+
+.AboutDescription h2{ 
+  color: #F4CE14;
+  font-family: "Markazi Text";
+  font-size: 2.5em;
+  letter-spacing: 0.2em;
+}
+
+.AboutDescription h3{
+  font-family: "Karla";
+  letter-spacing: 0.3em;
+
+}
+
+
+
+.AboutImageContainer{
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  padding-left: 5em;
+  padding-right: 3em;
+  max-width: 800px;
+  max-height: 600px;
+  
+}
+
+.AboutImage1{
+  max-height: 1000%;
+  grid-column: 2/4;
+  grid-row: 1/3;
+}
+
+.AboutImage2{
+  max-height: 1000%;
+  grid-column: 1/3;
+  grid-row: 2/4;
+
+}
+
+
+.Contact {
+  display: flex;
+  grid-area: CT;
+  align-items: center;
+  justify-content: center;
+  background-color: #495E57;
+  color: white;
+  
+}
+
+
+.Contact ul{
+  margin-right: 5em;
+  font-family: "Karla";
+
+}
+
+.FooterMenu{
+  display: flex;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+
+.Contact ul li {
+    list-style-type: none;
+}
+
+.Contact ul li a{
+  text-decoration: none;
+  color: white;
+  letter-spacing: normal;
+  transition: ease-in-out 0.2s;
+}
+
+
+.Contact ul li a:hover{
+  text-decoration: none;
+  color: rgba(162, 177, 164, 0.5);
+  letter-spacing: normal;
+  transition: ease-in-out 0.2s;
+  text-shadow: rgba(162, 177, 164, 0.17) 2px  2px 1px ;
+  letter-spacing: 0.1em;
+}
+
+
+
+.SMHeader {
+  margin-bottom: 1em;
+}
+
+.HeaderAdress{
+  margin-bottom: 2em;
+}
+
+@media screen and (max-width: 600px) {
+  .Container {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 0.12fr 0.5fr 1.4fr 0.4fr 0.4fr ;
+    grid-template-areas:
+        "nav nav nav nav nav nav nav nav nav nav nav nav"
+        "HR HR HR HR HR HR HR HR HR HR HR HR"
+        "HL HL HL HL HL HL HL HL HL HL HL HL"
+        "TST TST TST TST TST TST TST TST TST TST TST TST"
+        "AB AB AB AB AB AB AB AB AB AB AB AB"
+        "CT CT CT CT CT CT CT CT CT CT CT CT"
+  }
+
+  
+  .Navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    padding: 0;
+  }
+
+  .Logo {
+    width: 5%;
+    height: 100%;
+    padding-left: 1em;
+  }
+
+
+  .Description{
+    grid-column: 3/11;
+    grid-row: 1/1;
+    padding-right: 0;
+  }
+
+  .Description button{
+    font-size: 1em
+  }
+.Hero{
+  
+  grid-template-rows: 1fr;
+}
+
+  .HeroImage{
+    grid-row: 2/2;
+    grid-column: 1/12;
+    padding-right: 1.5em;
+    padding-left: 0.5em;
+    max-height: 250px;
+    padding-top: 3em;
+   padding-bottom: 2em;
+  }
+
+ .CTASection{
+  grid-row: 1/1;
+  grid-column: 1/-1;
+  padding: 0 2em;
+ }
+ 
+ .Highlights{
+  grid-template-rows: 0.1fr 8fr;
+ }
+
+ .Cards {
+  flex-direction: column;
+  
+}
+
+.Card{
+  background-color: #495E57;
+  color: white;
+}
+
+.Delivery{
+  padding-left: 1em;
+}
+
+.Profiles{
+  display: grid;
+
+}
+
+.AboutSection{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: 1fr 1fr;
+  max-height: 500px;
+  padding-bottom: 10em;
+}
+
+.AboutDescription{
+  grid-column: 2/12;
+  margin-left: 0;
+}
+
+.AboutImageContainer{
+  grid-column: 1/-1;
+  grid-row: 2/2;
+  min-width: 300px;
+  
+}
+
+.Contact{
+  display: flex;
+  font-size: 0.8em;
+  padding: 0 2em;
+}
+
+.Contact ul{
+  margin: 0;
+  padding-left: 1.5em
+}
+
+.Lists{
+  display: flex;
+  align-items: center;
+  
+}
+
+.ContactLogo{
+  max-width: 80px;
+  padding-right: 2em;
+}
+}
+
+
+@media screen and (max-width: 1330px) {
+  .Container {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows:  0.35fr 0.2fr 0.4fr 0.4fr ;
+    grid-template-areas:
+        "HR HR HR HR HR HR HR HR HR HR HR HR"
+        "HL HL HL HL HL HL HL HL HL HL HL HL"
+        "TST TST TST TST TST TST TST TST TST TST TST TST"
+        "AB AB AB AB AB AB AB AB AB AB AB AB"
+        "CT CT CT CT CT CT CT CT CT CT CT CT"
+  }
+
+  
+  .Navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    padding: 0;
+  }
+
+  .Logo {
+    width: 5%;
+    height: 100%;
+  }
+
+
+  .Description{
+    grid-column: 3/11;
+    grid-row: 1/1;
+    padding-right: 0;
+  }
+
+  .Description button{
+    font-size: 1em
+  }
+  .Hero{
+    display: grid;
+    grid-template-rows: 0.5fr 0.8fr;
+    padding-bottom: 2em;
+  }
+
+  .HeroImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 2/2;
+    grid-column: 3/11;
+    max-height: 400px;
+    max-width: 700px;
+    padding-top: 4em;
+  }
+
+
+.Highlights{
+  display: grid;
+  grid-template-rows: 0.01fr 0.01fr;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+ .CTASection{
+  grid-row: 1/1;
+  grid-column: 1/-1;
+ }
+
+
+
+ .Cards {
+  grid-column: 1/-1;
+  grid-row: 2/2;
+ 
+}
+
+.Card{
+  display: grid;
+  grid-column: 1/-1;
+  grid-row: 2/2;
+  grid-template-columns: repeat(12,1fr);
+  background-color: #495E57;
+  color: white;
+  margin: 1em;
+
+}
+
+
+
+.Delivery{
+  padding-left: 1em;
+}
+
+.Profiles{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+}
+
+.Profile{
+
+  display: grid;
+  grid-template-rows: 0.02fr 0.03fr 0.02fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.AboutSection{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: 0.5fr 1fr;
+}
+
+.PersonImage{
+  max-width: 400px;
+  max-height: 200px;
+}
+
+.AboutDescription{
+  grid-column: 2/12;
+  margin-left: 0;
+}
+
+.AboutImageContainer{
+  grid-column: 2/12;
+  grid-row: 2/2;
+  padding: 2em 4em;
+}
+
+.Contact{
+  display: flex;
+  font-size: 0.8em;
+  padding: 0 2em;
+}
+
+.Contact ul{
+  margin: 0;
+  padding-left: 1.5em
+}
+
+.Lists{
+  display: flex;
+  align-items: center;
+  
+}
+
+.ContactLogo{
+  max-width: 80px;
+  padding-right: 2em;
+}
+}

@@ -1,0 +1,128 @@
+.Navbar{
+  grid-area: nav;
+  position: relative;
+}
+
+.container{
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.Logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.menu-icon{
+  display: none;
+}
+
+
+.nav-link{
+  color: black;
+  letter-spacing: normal;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover{
+  color: #495E57;
+  letter-spacing: 0.15em;
+  transition: 0.3s ease-in-out;
+
+}
+
+.nav-elements ul{
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.nav-elements ul li:not(:last-child) {
+  margin-right: 60px;
+}
+
+.nav-elements ul a {
+  font-family: "Karla";
+  font-size: 1.4em;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-elements ul a.active{
+  color: white;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-elements ul a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  color: white
+}
+
+
+@media (max-width: 768px) {
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .container{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 1fr;
+  }
+ 
+  .Logo{
+    grid-column: 3/5;
+  }
+
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    margin-left: 0;
+    padding-right: 1em;
+    grid-column: 12;
+  }
+
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #fef7e5;
+    width: 0px;
+    height: calc(100vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+  }
+
+  .nav-elements.active {
+    width: 270px;
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-elements ul li {
+    margin-right: unset;
+    margin-top: 22px;
+  }
+}
